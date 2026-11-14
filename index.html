@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather AI | Temperature Prediction</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Weather AI</h1>
+        <p>Temperature Forecasting with Deep Learning</p>
+    </header>
+
+    <main class="container">
+        <h2>Predict Tomorrow's Temperature</h2>
+        <p>Enter the previous 30 days of temperatures.</p>
+
+        <label for="model">Select Prediction Model</label>
+        <select id="model">
+            <option value="rnn">RNN</option>
+            <option value="lstm">LSTM</option>
+            <option value="gru">GRU</option>
+        </select>
+
+        <label for="temperatures">
+            Enter 30 temperatures (°C), separated by commas
+        </label>
+        <textarea id="temperatures"
+            placeholder="20.7, 17.9, 18.8, ..."></textarea>
+
+        <button id="predictBtn" onclick="predictTemperature()">
+            Predict Temperature
+        </button>
+
+        <div id="result"></div>
+    </main>
+
+    <footer>
+        <p>Powered by RNN, LSTM and GRU Neural Networks</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
